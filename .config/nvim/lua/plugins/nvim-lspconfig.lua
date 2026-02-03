@@ -1,15 +1,19 @@
 local config = function()
-  -- Define diagnostic signs
-  local signs = {
-    Error = "❌",
-    Warn = "⚠️",
-    Hint = "💡",
-    Info = "ℹ️",
-  }
-  for type, icon in pairs(signs) do
-    local hl = "DiagnosticSign" .. type
-    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-  end
+  -- Configure diagnostics (Neovim 0.11+ API)
+  vim.diagnostic.config({
+    signs = {
+      text = {
+        [vim.diagnostic.severity.ERROR] = "❌",
+        [vim.diagnostic.severity.WARN] = "⚠️",
+        [vim.diagnostic.severity.HINT] = "💡",
+        [vim.diagnostic.severity.INFO] = "ℹ️",
+      },
+    },
+    virtual_text = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+  })
 end
 
 return {
