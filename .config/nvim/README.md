@@ -98,6 +98,30 @@ Native Neovim 0.11+ LSP configuration. Each file exports a table with:
 
 **Leader key: `<Space>`**
 
+### Quick Reference (Most Used)
+
+| Key | Action |
+|-----|--------|
+| `K` | **Show documentation** for symbol under cursor |
+| `gd` | **Peek definition** in popup (press `<CR>` to jump, `q` to close) |
+| `gD` | **Go to declaration** (jumps directly) |
+| `gi` | **Go to implementation** (jumps directly) |
+| `gf` | **Find all references** (shows definition + all usages) |
+| `<leader>ca` | **Code actions** (quick fixes, refactors) |
+| `<leader>rn` | **Rename** symbol across all files |
+| `<leader>ff` | **Find files** (fuzzy search) |
+| `<leader>fg` | **Search in files** (grep content) |
+| `<leader>fb` | **List open buffers** |
+| `<leader>f` | **Toggle file tree** |
+| `<leader>lo` | **Toggle outline** (show all symbols in file) |
+| `<C-Space>` | **Trigger autocomplete** |
+| `gcc` | **Toggle comment** (line) |
+| `gc` | **Toggle comment** (visual selection) |
+| `<leader>D` | **Show diagnostics** (errors/warnings for line) |
+| `<leader>nd` | **Next diagnostic** (jump to next error/warning) |
+| `<leader>pd` | **Previous diagnostic** |
+| `<leader>oi` | **Organize imports** (Python only) |
+
 ### General Navigation
 
 | Keybinding | Mode | Action |
@@ -157,29 +181,32 @@ Inside Telescope:
 
 | Keybinding | Mode | Action |
 |------------|------|--------|
-| `gf` | Normal | Find references (Lspsaga finder) |
-| `gD` | Normal | Go to declaration |
-| `gd` | Normal | Peek definition |
-| `gi` | Normal | Go to implementation |
-| `K` | Normal | Show hover documentation |
-| `<leader>ca` | Normal | Code actions |
-| `<leader>rn` | Normal | Rename symbol |
-| `<leader>D` | Normal | Show line diagnostics |
+| `K` | Normal | **Show documentation** for symbol under cursor |
+| `gd` | Normal | **Peek definition** in popup window |
+| `gD` | Normal | **Go to declaration** (jump directly) |
+| `gi` | Normal | **Go to implementation** (jump directly) |
+| `gf` | Normal | **Find references** (shows definition + all usages) |
+| `<leader>ca` | Normal | Code actions (quick fixes, refactors) |
+| `<leader>rn` | Normal | Rename symbol across all files |
+| `<leader>D` | Normal | Show line diagnostics (errors/warnings) |
 | `<leader>d` | Normal | Show cursor diagnostics |
-| `<leader>pd` | Normal | Previous diagnostic |
-| `<leader>nd` | Normal | Next diagnostic |
-| `<leader>lo` | Normal | Toggle outline (symbols) |
+| `<leader>nd` | Normal | Jump to next diagnostic |
+| `<leader>pd` | Normal | Jump to previous diagnostic |
+| `<leader>lo` | Normal | Toggle outline (all symbols in file) |
 | `<leader>oi` | Normal | Organize imports (Python only) |
 
-### Lspsaga Navigation
+### Lspsaga Popup Navigation
 
-Inside Lspsaga windows:
+When using `gd` (peek definition), `gf` (finder), or `K` (hover):
+
 | Key | Action |
 |-----|--------|
+| `<CR>` | **Jump to location** / Open file |
+| `q` | Close popup |
 | `<C-j>` | Scroll down in preview |
 | `<C-k>` | Scroll up in preview |
-| `<CR>` | Open/toggle item |
-| `q` | Quit window |
+| `<C-v>` | Open in vertical split |
+| `<C-x>` | Open in horizontal split |
 | `s` | Open in vertical split (finder) |
 | `i` | Open in horizontal split (finder) |
 
