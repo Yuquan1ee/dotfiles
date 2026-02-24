@@ -129,15 +129,27 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# Assign workspaces to monitors
+workspace $ws1 output DP-2
+workspace $ws2 output DP-2
+workspace $ws3 output HDMI-0
+workspace $ws4 output HDMI-0
+workspace $ws5 output DP-2
+workspace $ws6 output DP-2
+workspace $ws7 output DP-2
+workspace $ws8 output DP-2
+workspace $ws9 output DP-2
+workspace $ws10 output DP-2
+
 
 assign [class="firefox"] $ws1
 assign [class="Alacritty"] $ws2
 assign [class="TelegramDesktop"] $ws3
-assign [class="Blueman-manager"] $ws4
 assign [class="discord"] $ws4
+assign [class="Blueman-manager"] $ws5
 assign [class="Steam"] $ws5
 assign [class="Spotify"] $ws5
-assign [class="zoom"] $ws5
+assign [class="zoom"] $ws6
 assign [class="Meeting"] $ws6
 
 
